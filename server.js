@@ -50,6 +50,11 @@ app.get("/add", function(req, res) {
   res.sendFile(path.join(__dirname, "add.html"));
 });
 
+// Display table with all characters
+app.get("/table", function(req, res) {
+  res.sendFile(path.join(__dirname, "table.html"));
+});
+
 // Displays all characters
 app.get("/api/characters", function(req, res) {
   return res.json(characters);
